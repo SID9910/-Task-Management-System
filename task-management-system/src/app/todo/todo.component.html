@@ -16,14 +16,14 @@
             
             </mat-form-field >
             <mat-form-field style="width: 100%;" appearance="outline">
-                <mat-label> due Date :</mat-label>
-                <input formControlName ="item3"  matInput placeholder="Description">
+                <mat-label> Due Date :</mat-label>
+                <input formControlName ="item3"  matInput placeholder="Due Date ">
                 
                 </mat-form-field >
 
                 <mat-form-field style="width: 100%;" appearance="outline">
                     <mat-label>Priority Status</mat-label>
-                    <input formControlName ="item4"  matInput placeholder="Description">
+                    <input formControlName ="item4"  matInput placeholder="Priority Status">
                     
                     </mat-form-field >
               <button *ngIf="!isEditEnabled"   (click)="addTask()" mat-raised-button color ="primary">Add Todo</button>  
