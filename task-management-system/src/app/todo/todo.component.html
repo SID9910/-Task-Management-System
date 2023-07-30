@@ -2,11 +2,11 @@
     <div class="row">
         <div style="background:rgb(72, 64, 64);height: 93vh;background-image: url('https://tse4.mm.bing.net/th?id=OIP.z4d4v0Xiu0ro31sO7d09NgHaEK&pid=Api&P=0&h=180');" class="col-md-3">
 <div>
-    <mat-card class="mt-3">
+    <mat-card class=" mt-3">
         <form [formGroup]="todoForm"  >
             <mat-form-field style="width: 100%;" appearance="outline">
                 <mat-label> Add Task Name</mat-label>
-                <input matInput placeholder="Task Name">
+                <input formControlName ="item" matInput placeholder="Task Name">
                 <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
             </mat-form-field>
             <!-- <mat-form-field style="width: 100%;" appearance="outline">
@@ -14,7 +14,7 @@
             <input matInput placeholder="Description">
             
             </mat-form-field> -->
-              <button *ngIf="!isEditEnabled" (click)="addTask()" mat-raised-button color ="primary">Add Todo</button>  
+              <button *ngIf="!isEditEnabled" [disabled]="todoForm.invalid" (click)="addTask()" mat-raised-button color ="primary">Add Todo</button>  
               <button *ngIf="isEditEnabled" (click)="Updatetask()" mat-raised-button color ="primary">Update</button>        
         </form>
     </mat-card>
