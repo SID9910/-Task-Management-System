@@ -1,4 +1,7 @@
 export interface ITask{
     description: string,
-    done: boolean
+    description1: string,
+    done: boolean,
+    date: Date,
+    status:string
 }
